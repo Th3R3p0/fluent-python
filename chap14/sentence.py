@@ -29,3 +29,21 @@ for i in s:
 # Thus, all sequences (str, unicode, list, tuple, buffer, xrange) are iterable because they all have the __getitem__
 #     function implemented
 print(list(s))
+
+s3 = Sentence('Pig and Pepper')
+it = iter(s3)
+print(it)
+
+# next pops the zero index from the list
+print(next(it))
+print(next(it))
+print(next(it))
+# the next in the next line would through a StopIteration exception because there is no zero index
+# next(it)
+
+it = iter(s3)
+print(next(it))
+print(list(iter(it)))
+# the next in the next line would through a StopIteration exception - ??? because it has run through all indexes ???
+# print(next(it))
+
